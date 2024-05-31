@@ -130,7 +130,9 @@ where
 K: Utils + Float + Zero + One + Div<Output = K> + Add<Output = K> + Sub<Output = K> + Mul<Output = K>,
 {
     fn absolute(&self) -> Self {
-        Self::new(self.real.abs(), self.imaginary.abs())
+        // Self::new(self.real.abs(), self.imaginary.abs())
+        let magnitude = (self.real * self.real + self.imaginary * self.imaginary).sqrt();
+        Self::new(magnitude, <K as Utils>::zero())
     }
 
     fn square(&self) -> Self {

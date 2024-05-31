@@ -8,10 +8,6 @@ pub struct Matrix<K> {
     data: Vec<Vec<K>>,
 }
 
-// pub enum MatrixError {
-//     SingularMatrix
-// }
-
 impl<K> Matrix<K>
 where 
 K: Add<Output = K> + Sub<Output = K> + Mul<Output = K> + Div<Output = K> + Neg<Output = K> + Copy + Clone + Default + PartialEq + Utils,

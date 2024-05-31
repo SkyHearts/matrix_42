@@ -514,9 +514,9 @@ fn main() {
     println!("{}", u.norm());
     println!("{}", u.norm_1());
     println!("{}\n", u.norm_inf());
-    // [0., 1.732050]
-    // [0., 3.]
-    // [0., 1]
+    // [1.732051+0.0i]
+    // [3.0+0.0i]
+    // [1.0+0.0i]
 
     println!("---------Cos theta-----------\n");
 
@@ -649,10 +649,11 @@ fn main() {
     println!("{}\n", u.rank());
     // 3
 
+    println!("The bool below test if -0.0 is less than 0.0(Check main for code)\n");
     if -0. < 0. {
-        println!("True\n");
+        println!("True. -0.0 < 0.0\n");
     }
     else {
-        print!("False\n");
+        print!("False. -0.0 == 0.0\n");
     }
 }

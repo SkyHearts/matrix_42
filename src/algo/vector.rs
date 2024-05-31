@@ -54,7 +54,7 @@ K: Add<Output = K> + Sub<Output = K> + Mul<Output = K> + Div<Output = K> + Copy 
     pub fn norm(&mut self) -> K {
         let mut result = K::default();
         for element in self.data.clone().into_iter() {
-            result = result + element.square();
+            result = result + element.absolute().square();
         }
         result.sroot()
     }
